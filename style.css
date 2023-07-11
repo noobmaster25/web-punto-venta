@@ -1,0 +1,468 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(27, 38, 59);
+  height: 100vh;
+
+}
+
+header nav {
+  margin: 0 auto;
+  background-color: rgb(13, 27, 42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+nav a:hover {
+  color: #00c2ff;
+}
+
+main {
+
+  color: aliceblue;
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crear-categoria {
+  margin-top: 1rem;
+}
+.contenedor-search{
+  display: flex;
+  gap: 1rem;
+}
+.search-input{
+  display:flex;
+
+}
+.search-input>*{
+  height:2rem;
+}
+.contenedor-search input[type="search"]{
+  width: 80%;
+}
+.contenedor-search input[type="submit"]{
+  width: 20%;
+  background: #22b429;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.contenedor-search input[type="submit"]:active{
+  background: #22b429d7;
+}
+table {
+  border: 1px solid rgb(97, 95, 95);
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background-color: rgb(29, 42, 66);
+}
+
+table thead {
+  border-bottom: 2px solid white;
+}
+
+table th,
+table td {
+  padding: 1rem;
+}
+
+tbody tr {
+  border-bottom: 1px solid rgb(148, 148, 148);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: .5rem 1rem;
+  margin: 6px 5px;
+  font-weight: bold;
+}
+
+.btn-eliminar {
+  background: rgb(202, 42, 42);
+  color: white;
+}
+
+.crear-producto {
+  margin-top: 1rem;
+}
+
+.btn-editar,
+.crear-categoria,
+.crear-producto {
+  background: rgb(9, 155, 41);
+  color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-contenido {
+  background-color: rgb(29, 42, 66);
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: .5rem;
+  border: 1px solid rgba(136, 136, 136, 0.315);
+  width: 80%;
+  max-width: 600px;
+  color: #f5f3f3;
+}
+
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos para el formulario */
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  
+}
+
+input,
+textarea {
+  font-weight: lighter;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: solid 2px #6d6a6a;
+  outline: none;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none;
+  background-color: rgb(29, 42, 66);
+  color: #fff;
+}
+
+input:focus,
+textarea:focus {
+  border: none;
+  border-bottom: solid 2px #ffffff;
+}
+
+#opciones-categoria {
+  
+  display: block;
+  margin-top: 3px;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 2rem;
+  background-color: rgb(43, 61, 94);
+  color: white;
+  font-size: 1rem;
+  border:none;
+}
+
+
+button[type=submit] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.btn-disable{
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* css para ordenes */
+.search label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+  background-color: #1f2024;
+  color: #fff;
+}
+
+.search button {
+  background-color: #37b432;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+.customer label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.customer select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 200px;
+  background-color: #1f2024;
+  color: #fff;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+
+}
+
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+
+#btn-terminar-orden ,.btn-confirmar{
+  background: #22b429;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btn-eliminar-orden ,.btn-cancelar {
+  background: #df1c1c;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btn-eliminar-orden:hover,
+#btn-terminar-orden:hover {
+  transform: scale(1.05);
+}
+#pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pagination button {
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ddd;
+  color: #333;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#pagination button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+
+/* estilos del modal de error  */
+.fondo-modal{
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00000067;
+}
+
+
+.modal-info-container{
+  min-width: 300px;
+  
+  position: absolute;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #252d3d;
+  border-radius: .5rem;
+}
+.modal-info-header {
+  background-color:#f03535;
+  border-radius: .5rem .5rem 0 0;
+  padding: .1rem;
+  width:  100%;
+  text-align: center;
+ 
+  color: white;
+}
+.modal-info-body{
+  padding: 1.5rem .5rem;
+}
+.modal-confirmacion-header {
+  background-color:#22b429;
+  border-radius: 1rem 1rem 0 0;
+  padding: .5rem;
+  width:  100%;
+  text-align: center;
+  color: white;
+}
+/* responsive
+
+/* Estilos para pantallas pequeñas (hasta 600px de ancho) */
+@media screen and (max-width: 600px) {
+  /* Estilos para el archivo productos.html */
+  #input-buscar {
+    width: 100%;
+  }
+
+  #buscar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Estilos para el archivo clientes.html */
+  #input-buscar-clientes {
+    width: 100%;
+  }
+
+  #btn-buscar-clientes {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Estilos para el archivo categorias.html */
+  .crear-categoria {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Estilos para el archivo ordenes.html */
+  .search input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search button {
+    width: 100%;
+  }
+
+  .customer select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #btn-terminar-orden,
+  .btn-confirmar,
+  #btn-eliminar-orden,
+  .btn-cancelar {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Estilos para pantallas medianas (de 601px a 1024px de ancho) */
+@media screen and (min-width: 1023px) and (max-width:1491px) {
+  main{
+   width: 98%;
+  }
+   table {
+     font-size: 16px;
+   }
+   table tr td, table tr th {
+     padding: 15px 5px;
+     text-align: center;
+   }
+    .btn-eliminar{
+     padding: 10px;
+ 
+   }
+ 
+ }
+@media screen and (min-width: 800px) and (max-width:1023px) {
+ main{
+  width: 98%;
+ }
+  table {
+    font-size: 16px;
+  }
+  table tr td, table tr th {
+    padding: 15px 5px;
+    text-align: center;
+  }
+   .btn-eliminar{
+    padding: 10px;
+
+  }
+
+}

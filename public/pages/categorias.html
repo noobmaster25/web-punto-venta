@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    
+    <header >
+      <nav>
+        <ul>
+          <!-- <a href="#">home</a> -->
+          <a href="/public/pages/productos.html">productos</a>
+          <a href="./categorias.html">categorias</a>
+          <a href="/public/pages/clientes.html">Clientes</a>
+          <a href="/public/pages/ordenes.html">venta</a>
+        </ul>
+      </nav>
+      </header>
+    <main>
+      <section>
+        <h1>Todas las categorias</h1>
+        <button class="crear-categoria">Crear nueva categoria</button>
+        <table>
+            
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>nombre</th>
+              <th>descripcion</th>
+              <th>operaciones</th>
+            </tr>
+          </thead>
+          <tbody id="tabla"></tbody>
+        </table>
+        <div id="pagination"></div>
+      </section>
+      <!-- Modal para editar una categoría -->
+      <div id="modal-editar-categoria" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" id="cancelar-btn">&times;</span>
+          <h2 class="titulo-modal">Editar categoría</h2>
+          <form id="formulario-editar-categoria">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea>
+            <button type="submit" class="btn-guardar">Guardar</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/public/js/categorias.js"></script>
+  </body>
+</html>

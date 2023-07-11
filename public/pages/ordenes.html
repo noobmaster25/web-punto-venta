@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ordenes</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                  <!-- <a href="#">home</a> -->
+                  <a href="/public/pages/productos.html">productos</a>
+                  <a href="./categorias.html">categorias</a>
+                  <a href="/public/pages/clientes.html">Clientes</a>
+                  <a href="/public/pages/ordenes.html">venta</a>
+                </ul>
+              </nav>
+        </header>
+        
+      
+        <main>
+                <div class="contenedor">
+                    <div class="search">
+                        <label for="search">Buscar por ID del producto:</label>
+                        <div class="search-input">
+                            <input type="text" id="search" name="search">
+                            <button type="submit" id="agregar">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="customer">
+                        <label for="customer">Elegir cliente existente:</label>
+                        <select id="customer" name="customer" class="opciones-clientes">
+                        </select>
+                    </div>
+                    </div>
+            <h1>Nueva orden</h1>
+            <table >
+                <thead>
+                    <tr>
+                        <th>ID del producto</th>
+                        <th>Nombre del producto</th>
+                        <th>precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="contenido-orden">         
+                </tbody>
+            </table>
+            <div >
+                <h2>Total a pagar : </h2>
+                <h2 id="contenido-compra">0.00</h2>
+            </div>
+            <div class="actions">
+                <button type="button" id="btn-terminar-orden">Terminar compra</button>
+                <button type="button" id="btn-eliminar-orden">Eliminar orden</button>
+            </div>
+        </main>
+        <script type="module" src="/public/js/ordenes.js"></script>
+</body>
+</html>
